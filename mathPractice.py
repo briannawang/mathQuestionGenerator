@@ -16,7 +16,7 @@ opSym = ""
 score = 0
 numQs = None
 rangeInts = None
-
+2
 def calcAns():
     if opNum == 1:
         print(str(nums[0]) + " + " + str(nums[1]), end="")
@@ -46,7 +46,7 @@ def isValidInput(testVal, minVal):
 print("\n..........Simple Operations Practice.........")
 while not isinstance(numQs, int):
     numQs = input("How many practice questions?: ")
-    numQs = isValidInput(numQs, 0)
+    numQs = isValidInput(numQs, 1)
 
 while not isinstance(rangeInts, int):
     rangeInts = input("Greatest absolute value of numbers generated?: ")
@@ -54,7 +54,7 @@ while not isinstance(rangeInts, int):
     
 
 for i in range(numQs):
-    opNum = 4 #random.randint(1, 4)
+    opNum = random.randint(1, 4)
     
     nums[0] = random.randint(-rangeInts, rangeInts)
     nums[1] = random.randint(-rangeInts, rangeInts)
