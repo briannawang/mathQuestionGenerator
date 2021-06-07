@@ -54,7 +54,7 @@ while not isinstance(rangeInts, int):
     
 
 for i in range(numQs):
-    opNum = random.randint(1, 4)
+    opNum = 4 #random.randint(1, 4)
     
     nums[0] = random.randint(-rangeInts, rangeInts)
     nums[1] = random.randint(-rangeInts, rangeInts)
@@ -73,9 +73,11 @@ for i in range(numQs):
     
     if opNum == 4 and "/" in submis:
         submisList = submis.split("/")
+        submisList[0] = isValidInput(submisList[0], None)
+        submisList[1] = isValidInput(submisList[1], None)
         submis = int(submisList[0])/int(submisList[1])
-    
-    submis = isValidInput(submis, None)
+    else:
+        submis = isValidInput(submis, None)
     
     if answer == submis:
         print("Correct!")
