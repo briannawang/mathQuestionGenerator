@@ -16,7 +16,7 @@ opSym = ""
 score = 0
 numQs = None
 rangeInts = None
-2
+
 def calcAns():
     if opNum == 1:
         print(str(nums[0]) + " + " + str(nums[1]), end="")
