@@ -3,6 +3,7 @@ import random
 nums = []
 nums = [None] * 2
 
+wantInstruc = ""
 opNum = 0
 opSym = ""
 score = 0
@@ -36,6 +37,14 @@ def isValidInput(testVal, minVal):
         print("Invalid Value.")
 
 print("\n..........Simple Operations Practice.........")
+wantInstruc = input("Type 'i' for further instructions, enter any other value to continue: ")
+if wantInstruc == "i":
+    print("""\nInstructions:
+    The number of practice questions should be greater than 0.
+    The absolute value of numbers generated will be the min. negative and max. positive value randomly generated in questions.
+    Questions should be answered without spaces between values.
+    Answer division questions using '/' in improper fractions, and reduce to the lowest terms.\n""")
+
 while not isinstance(numQs, int):
     numQs = input("How many practice questions?: ")
     numQs = isValidInput(numQs, 1)
