@@ -86,4 +86,8 @@ for i in range(numQs):
     else:
         print("Incorrect.")
         
-print("\nScore: " + str(score) + "/" + str(numQs))
+print("\nScore: " + str(score) + "/" + str(numQs) + " (" + str(round(score/numQs, 2)*100) + "%)")
+if score == numQs:
+    print("Perfect Score! :D")
+else:
+    print("Nice Effort! Try Again?")
